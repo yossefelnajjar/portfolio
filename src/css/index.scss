@@ -2,6 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 * {
   color: whitesmoke;
   transition-duration: 500ms !important;
@@ -11,14 +12,10 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 
-html {
+html{
   font-size: 16px;
 }
 
-::-moz-selection {
-  background-color: rgb(197, 0, 89);
-  color: black;
-}
 
 ::selection {
   background-color: rgb(197, 0, 89);
@@ -29,16 +26,17 @@ html {
   border-radius: 80px;
 }
 
-.about:hover :nth-child(1) {
-  transform: translateY(-3200px);
+.about {
+  &:hover :nth-child(1) {
+    transform: translateY(-3200px);
+  }
+  &:hover :nth-child(2) {
+    transform: translate(0, 0);
+    span {
+      display: inline;
+    }
+  }
 }
-.about:hover :nth-child(2) {
-  transform: translate(0, 0);
-}
-.about:hover :nth-child(2) span {
-  display: inline;
-}
-
 .contact:hover .paper-plane {
   transform: translate(0, 0);
 }
@@ -58,4 +56,4 @@ html {
   100% {
     opacity: 0;
   }
-}/*# sourceMappingURL=index.css.map */
+}
