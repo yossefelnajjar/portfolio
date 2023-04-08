@@ -1,4 +1,14 @@
 import NavBar from "../components/NavBar";
+import {
+  CSS,
+  Git,
+  HTML,
+  JS,
+  React,
+  Redux,
+  Sass,
+  Tailwind,
+} from "../assets/assets";
 
 const About = () => {
   return (
@@ -18,7 +28,16 @@ const About = () => {
           using some of the newest and most relied upon technologies in our
           Frontend development industry
         </div>
-        <div className="technologies text-center mt-20"></div>
+        <div className="technologies flex justify-between items-center mt-20 px-14">
+          <img src={HTML} alt="HTML" className="w-48 hover:scale-105" />
+          <img src={CSS} alt="HTML" className="w-48 hover:scale-105" />
+          <img src={JS} alt="HTML" className="w-48 hover:scale-105" />
+          <img src={React} alt="HTML" className="w-48 hover:scale-105" />
+          <img src={Redux} alt="HTML" className="w-48 hover:scale-105" />
+          <img src={Sass} alt="HTML" className="w-48 hover:scale-105" />
+          <img src={Tailwind} alt="HTML" className="w-48 hover:scale-105" />
+          <img src={Git} alt="HTML" className="w-48 hover:scale-105" />
+        </div>
       </div>
     </>
   );

@@ -9,6 +9,9 @@ const Projects = () => {
           Projects
           <span className="ct-animate-blink text-inherit">_</span>
         </div>
+        <div className="text-4xl mt-8">
+          
+        </div>
       </div>
     </>
   );
