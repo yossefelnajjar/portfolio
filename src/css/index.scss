@@ -13,10 +13,9 @@ body {
   background-color: black;
 }
 
-html{
+html {
   font-size: 16px;
 }
-
 
 ::selection {
   background-color: rgb(197, 0, 89);
@@ -56,5 +55,14 @@ html{
   }
   100% {
     opacity: 0;
+  }
+}
+
+.send-btn {
+  &:hover span {
+    opacity: 0;
+  }
+  &:hover div {
+    transform: translate(0);
   }
 }

@@ -59,4 +59,10 @@ html {
   100% {
     opacity: 0;
   }
+}
+.send-btn:hover span {
+  opacity: 0;
+}
+.send-btn:hover div {
+  transform: translate(0);
 }/*# sourceMappingURL=index.css.map */
