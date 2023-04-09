@@ -1,9 +1,13 @@
 import { Admin, Bank } from "../assets/assets";
 import NavBar from "../components/NavBar";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}>
       <NavBar textColor="text-red-500" />
       <div className="bg-black w-screen h-screen flex flex-col justify-center px-5 py-2 sm:pt-36 sm:h-fit md:h-fit md:pt-36 xl:pt-36 overflow-hidden">
         <div className="text-white text-9xl sm:text-7xl md:text-7xl">
@@ -65,7 +69,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

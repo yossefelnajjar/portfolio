@@ -1,17 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./css/index.css";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
+
+import { BrowserRouter } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+
 root.render(
-  <>
-    <Home />
-    <About />
-    <Projects />
-    <Contact />
-  </>
+  <BrowserRouter>
+    <AnimatedRoutes />
+  </BrowserRouter>
 );

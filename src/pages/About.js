@@ -1,4 +1,5 @@
 import NavBar from "../components/NavBar";
+import { motion } from "framer-motion";
 import {
   CSS,
   Git,
@@ -12,7 +13,10 @@ import {
 
 const About = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}>
       <NavBar textColor="text-blue-400" />
       <div className="bg-black w-screen h-screen flex flex-col justify-center px-5 py-2 sm:pt-36 sm:h-fit md:pt-36 md:h-fit lg:pt-36 lg:h-fit xl:pt-36 xl:h-fit overflow-hidden">
         <div className="text-white text-9xl sm:text-8xl">
@@ -67,7 +71,7 @@ const About = () => {
           />
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

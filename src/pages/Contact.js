@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBar from "../components/NavBar";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 import Swal from "sweetalert2";
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const form = useRef();
@@ -44,7 +45,10 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}>
       <NavBar />
       <div className="bg-black w-screen h-screen flex flex-col justify-center px-5 py-2 pt-48 sm:pt-36 sm:h-fit md:pt-36 md:h-fit lg:pt-36 lg:h-fit xl:pt-36 xl:h-fit overflow-hidden">
         <div className="text-white text-9xl sm:text-7xl md:text-7xl lg:text-8xl">
@@ -117,7 +121,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

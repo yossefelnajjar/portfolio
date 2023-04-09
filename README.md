@@ -2,7 +2,7 @@
 
 ## Overview
 
-portfolio Using React.js, Tailwind
+Personal portfolio Using React.js, Tailwind
 
 ### Screenshot
 
@@ -10,7 +10,7 @@ portfolio Using React.js, Tailwind
 
 ### Links
 
-- [Live Site URL](https://yossefdashboard.netlify.app/)
+- [Live Site URL](https://yossef-portfolio.netlify.app)
 
 ### Built with
 
@@ -22,14 +22,16 @@ portfolio Using React.js, Tailwind
 - Tailwind css
 - Sass
 - Font Awesome
+- Frame motion
+- sweetalert
+- React Router
 
 ### Features
 
 - Modern UI/UX
 - Semantic HTML5 markup
 - CSS flexbox
-- CSS grid
 - Responsive design
-- 404 NotFound page
 - React component methodology
 - Advanced files structure
+- Cool page transitions
