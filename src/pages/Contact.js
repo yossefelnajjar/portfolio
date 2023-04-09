@@ -1,8 +1,48 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBar from "../components/NavBar";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_peptz7g",
+        "template_5ujm5qv",
+        form.current,
+        "N1E9c8713eOR8iKwl"
+      )
+      .then(
+        () => {
+          Swal.fire({
+            title: "Success",
+            text: "Your message has been successfully sent. I'll reply to you as soon as possible.",
+            icon: "success",
+            confirmButtonText: "OK",
+            background: "#000",
+            color: "#fff",
+          });
+        },
+        () => {
+          Swal.fire({
+            title: "Error!",
+            text: "There was an error while sending the message. Please try again!",
+            icon: "error",
+            confirmButtonText: "OK",
+            background: "#000",
+            color: "#fff",
+          });
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <>
       <NavBar />
@@ -13,8 +53,8 @@ const Contact = () => {
         </div>
         <div className=" w-full h-full text-4xl mt-8">
           <form
-            id="contact-form"
-            method="post"
+            ref={form}
+            onSubmit={sendEmail}
             className="h-96 w-full sm:h-full md:h-full lg:h-full xl:h-full">
             <div className="my-form-content w-full flex items-center gap-4 h-full sm:scale-95 sm:flex-col md:scale-75 md:flex-col lg:scale-75 lg:flex-col xl:scale-75 xl:flex-col">
               <div className="my-form-col w-full flex flex-col gap-4">
@@ -25,8 +65,7 @@ const Contact = () => {
                       required
                       placeholder="Name"
                       type="text"
-                      id="fromName"
-                      name="fromName"
+                      name="user_name"
                     />
                   </div>
                   <div>
@@ -35,14 +74,12 @@ const Contact = () => {
                       required
                       placeholder="E-mail"
                       type="email"
-                      id="fromEmail"
-                      name="fromEmail"
+                      name="user_email"
                     />
                   </div>
                   <div>
                     <input
                       className="rad p-5 bg-slate-900 text-white outline-none border border-slate-900 focus:border-white focus:placeholder:opacity-0 w-full"
-                      required
                       placeholder="Subject"
                       type="text"
                       id="subject"

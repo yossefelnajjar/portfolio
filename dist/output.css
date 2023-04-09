@@ -564,6 +564,28 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 481px){
+  .container{
+    max-width: 481px;
+  }
+}
+
+@media (min-width: 769px){
+  .container{
+    max-width: 769px;
+  }
+}
+
+@media (min-width: 1025px){
+  .container{
+    max-width: 1025px;
+  }
+}
+
 .fixed{
   position: fixed;
 }
@@ -586,10 +608,6 @@ video {
 
 .flex{
   display: flex;
-}
-
-.hidden{
-  display: none;
 }
 
 .h-72{
@@ -836,10 +854,6 @@ video {
   padding-top: 12rem;
 }
 
-.text-center{
-  text-align: center;
-}
-
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -863,11 +877,6 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-blue-400{

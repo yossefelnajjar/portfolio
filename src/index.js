@@ -9,9 +9,9 @@ import Contact from "./pages/Contact";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    {/* <Home /> */}
-    {/* <About /> */}
-    {/* <Projects /> */}
+    <Home />
+    <About />
+    <Projects />
     <Contact />
   </>
 );
