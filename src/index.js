@@ -4,13 +4,15 @@ import "./css/index.css";
 
 import { BrowserRouter } from "react-router-dom";
 import AnimatedRoutes from "./components/AnimatedRoutes";
+import CvBtn from "./components/CvBtn";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-
-
 root.render(
-  <BrowserRouter>
-    <AnimatedRoutes />
-  </BrowserRouter>
+  <>
+    <BrowserRouter>
+    <CvBtn />
+      <AnimatedRoutes />
+    </BrowserRouter>
+  </>
 );
