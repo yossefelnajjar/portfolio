@@ -1,0 +1,680 @@
+/* importing the font */
+@import url(https://db.onlinewebfonts.com/c/c1997be3f7e3024fe97d0af51c35368c?family=Death+Star);
+@import "react-slideshow-image/dist/styles.css";
+/* mixins */
+/* Global rules */
+/* Style for webkit-based browsers */
+/* These styles may not work in all browsers */
+/* Track */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+  background-color: #ffffff; /* Background color for the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8e44ad; /* Color of the scrollbar handle (purple) */
+  border-radius: 5px; /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6c3483; /* Color of the scrollbar handle on hover (a darker shade of purple) */
+}
+
+/* Track when the scrollbar is on the edge */
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Color of the scrollbar track */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  letter-spacing: 0.1cm;
+  text-decoration: none;
+  cursor: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Death Star";
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+::-moz-selection {
+  background-color: purple;
+  color: black;
+}
+
+::selection {
+  background-color: purple;
+  color: black;
+}
+
+.page {
+  position: relative;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left left;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+}
+.parent .earth {
+  position: relative;
+  bottom: -70%;
+}
+.parent .astronaut {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  animation: astronautAnimation 2s infinite ease-in-out;
+}
+@keyframes astronautAnimation {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -5px);
+  }
+}
+
+.burgerBars {
+  position: fixed;
+  z-index: 500;
+  width: 100px;
+  color: whitesmoke;
+  top: 0;
+  right: 30px;
+  transition: 0.3s;
+}
+.burgerBars:hover {
+  color: purple;
+}
+
+.burgerMenu {
+  position: absolute;
+  transition: 1s;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 2000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateY(-5000px);
+}
+.burgerMenu > svg {
+  position: fixed;
+  z-index: 500;
+  width: 100px;
+  color: whitesmoke;
+  top: 0;
+  right: 30px;
+  transition: 0.3s;
+}
+.burgerMenu > svg:hover {
+  color: purple;
+}
+.burgerMenu ul {
+  padding-left: 20px;
+}
+.burgerMenu ul li a {
+  font-size: 4rem;
+  font-weight: bold;
+  color: purple;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+.burgerMenu ul li a:hover {
+  color: whitesmoke;
+}
+@media (max-width: 768px) {
+  .burgerMenu ul li a {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .burgerMenu ul {
+    padding-left: 5px;
+  }
+}
+
+.bgOverlay {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  font-size: 6rem;
+  white-space: nowrap;
+  color: #1f003e;
+  text-shadow: 0px 0px 10px #b377ff;
+}
+.bgOverlay .upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 3;
+}
+.bgOverlay .upper .upperMsg {
+  padding: 0 5px;
+  border-top: 5px solid #b377ff;
+  border-bottom: 5px solid #b377ff;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: aimateUpperMsgAnimation 2s linear 1;
+}
+@keyframes aimateUpperMsgAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .bgOverlay .upper .upperMsg {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1300px) {
+  .bgOverlay .upper .upperMsg {
+    font-size: 2.7rem;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1550px) {
+  .bgOverlay .upper .upperMsg {
+    font-size: 5rem;
+  }
+}
+.bgOverlay .upper .midlleMsg {
+  margin-bottom: 400px;
+}
+@media (max-width: 768px) {
+  .bgOverlay .upper .midlleMsg {
+    margin-bottom: 200px;
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1300px) {
+  .bgOverlay .upper .midlleMsg {
+    margin-bottom: 200px;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1550px) {
+  .bgOverlay .upper .midlleMsg {
+    margin-bottom: 200px;
+    font-size: 5rem;
+  }
+}
+.bgOverlay .lowerMsg {
+  flex: 1;
+  font-size: 4rem;
+  transition: 0.3s;
+  animation: lowerMsgAnimation 2s infinite ease-in-out;
+}
+@keyframes lowerMsgAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.bgOverlay .lowerMsg:hover {
+  opacity: 1;
+  animation: none;
+  text-shadow: 0px 0px 10px white;
+}
+@media (max-width: 768px) {
+  .bgOverlay .lowerMsg {
+    font-size: 1.5rem;
+  }
+}
+
+.glitchUpperMsg {
+  animation: aimateUpperMsgAnimation 2s linear 1, glitch 2.5s infinite !important;
+}
+
+.blink,
+.blinkMain {
+  position: absolute;
+  background-color: black;
+  z-index: 6000;
+}
+.blink::before,
+.blinkMain::before {
+  content: "";
+  position: absolute;
+  z-index: 6000;
+  background-color: black;
+}
+
+.blink {
+  width: 100vw;
+  height: 0vh;
+  animation: blinkAnimation 2s 1 ease-in-out;
+}
+.blink::before {
+  width: 100vw;
+  height: 50vh;
+  margin-top: 100vh;
+  animation: blinkAnimationBefore 2s 1 ease-in-out;
+}
+@keyframes blinkAnimationBefore {
+  0%, 80% {
+    margin-top: 50vh;
+  }
+  50% {
+    margin-top: 80vh;
+  }
+  100% {
+    margin-top: 100vh;
+  }
+}
+@keyframes blinkAnimation {
+  0%, 80% {
+    height: 50vh;
+  }
+  50% {
+    height: 30vh;
+  }
+  100% {
+    height: 0vh;
+  }
+}
+
+.blinkMain {
+  width: 0vw;
+  height: 100vh;
+  animation: blinkMainAnimation 2s 1 ease-in-out, glitch 1s 1;
+}
+.blinkMain::before {
+  width: 0vw;
+  height: 100vh;
+  margin-left: 50vw;
+  animation: blinkMainAnimationBefore 2s 1 ease-in-out, glitch 2s 1;
+}
+@keyframes blinkMainAnimationBefore {
+  0% {
+    margin-left: 50vw;
+    width: 50vw;
+  }
+  100% {
+    margin-left: 100vw;
+    width: 0;
+  }
+}
+@keyframes blinkMainAnimation {
+  0% {
+    width: 50vw;
+  }
+  100% {
+    width: 0vw;
+  }
+}
+
+.msgLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4500;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.msgLayer .msgPopup {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 70vw;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 15px;
+  color: rgb(4, 158, 218);
+  justify-content: space-between;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  .msgLayer .msgPopup {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 1300px) {
+  .msgLayer .msgPopup {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1550px) {
+  .msgLayer .msgPopup {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+.msgLayer .msgPopup > div {
+  flex: 1;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 5rem;
+  opacity: 1;
+  animation: glitch 2.5s infinite, waitText 5s 1;
+}
+@keyframes waitText {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .msgLayer .msgPopup > div {
+    line-height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+.msgLayer .msgPopup button {
+  color: purple;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid white;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-left: auto;
+}
+.msgLayer .msgPopup button:hover {
+  background-color: #fff;
+  color: black;
+  animation: glitch 2.5s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+.social {
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  border-radius: 10px;
+  left: 0;
+  padding: 5px 0;
+}
+.social img {
+  padding: 5px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.social img:hover {
+  opacity: 1;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  height: calc(100% - 100px);
+}
+.skillsGrid .skillCard {
+  border-radius: 10px;
+  background-color: rgba(135, 206, 235, 0.2);
+  padding: 15px;
+  grid-column: 1, 2;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 10px sloid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.skillsGrid .skillCard img {
+  width: 200px;
+  height: 200px;
+}
+@media (max-width: 910px) {
+  .skillsGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 910px) and (max-width: 1300px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1300px) and (max-width: 2000px) {
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.slider {
+  animation: waitText 5s 1;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 60vw;
+  height: 44vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider svg {
+  width: 5%;
+  color: purple;
+}
+.slider .projects {
+  flex: 1;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 15px;
+}
+.slider .projects .sliderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider .projects .sliderHeader > p {
+  font-size: 3rem;
+  color: purple;
+}
+.slider .projects .sliderHeader .sliderLinks {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+.slider .projects .sliderHeader .sliderLinks a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: -moz-min-content;
+  width: min-content;
+}
+.slider .projects .sliderHeader .sliderLinks a:hover {
+  background-color: rgba(128, 0, 128, 0.1);
+}
+.slider .projects .sliderHeader .sliderLinks a img {
+  width: 30px;
+}
+.slider .projects .sliderHeader .sliderLinks a svg {
+  width: 30px;
+  color: #ceb7ff;
+}
+.slider .projects .sliderHeader .sliderLinks a p {
+  margin-top: 5px;
+  font-size: 0.5rem;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.slider .projects .sliderImage {
+  width: 60%;
+  height: 85%;
+  margin: 0 auto;
+}
+.slider .projects .sliderImage img {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .slider {
+    top: 9%;
+    width: 90vw;
+    height: 40vh;
+  }
+  .slider .sliderHeader {
+    flex-direction: column;
+  }
+  .slider svg {
+    width: 15%;
+  }
+  .slider .sliderImage {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1300px) {
+  .slider {
+    width: 100vw;
+    height: 40vh;
+  }
+  .slider .projects .sliderImage {
+    width: 80%;
+    height: 85%;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1700px) {
+  .slider {
+    width: 95vw;
+    height: 40vh;
+  }
+  .slider .sliderImage {
+    width: 90%;
+    height: 85%;
+  }
+}
+
+.cursor {
+  position: absolute;
+  z-index: 95959595;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.notFound {
+  text-align: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../images/bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  flex-direction: column;
+}/*# sourceMappingURL=main.css.map */
