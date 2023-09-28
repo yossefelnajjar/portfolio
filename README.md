@@ -38,7 +38,7 @@ The Experience page details my work history, including previous jobs, projects, 
 
 ### 404 Not Found
 
-![404 Not Found Page Screenshot](./src/images/pages/NotFound.png)
+![404 Not Found Page Screenshot](./src/images/pages/notFound.png)
 
 The 404 Not Found page is displayed when a user tries to access a page that doesn't exist. It helps users navigate back to the main sections of the portfolio.
 
