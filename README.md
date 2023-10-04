@@ -1,10 +1,10 @@
 # Portfolio
 
+![Portfolio Screenshot](./src/images/pages/home.png)
+
 ## Live Demo
 
-You can access the live Version of my portfolio [here]([https://yossef-portfolio.netlify.app/](https://portfolio-yossef.vercel.app/)).
-
-![Portfolio Screenshot](./src/images/pages/home.png)
+**Live Demo**: [Portfolio](https://portfolio-yossef.vercel.app/).
 
 Welcome to my portfolio! This project showcases my skills and projects using the following technologies and libraries:
 
