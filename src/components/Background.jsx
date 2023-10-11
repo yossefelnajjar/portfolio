@@ -1,4 +1,4 @@
-import earth from "../images/earth.svg";
+import earth from "../assets/images/earth.svg";
 
 export default function Background({ showEarth, spaceBg, astronaut }) {
   return (

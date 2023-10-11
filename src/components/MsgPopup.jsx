@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { setVisibility } from "../rtk/slices/lowerMsg-slice";
 
 export default function MsgPopup({ message }) {
-  let dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   function handleExit() {
     document.querySelector(".lowerMsg").style.visibility = "visible";
@@ -13,9 +13,7 @@ export default function MsgPopup({ message }) {
     <div className="msgLayer">
       <div className="msgPopup">
         <div>{message}</div>
-        <button className="exit" onClick={handleExit}>
-          EXIT
-        </button>
+        <button className="exit" onClick={handleExit}> EXIT </button>
       </div>
       <div className="blink"></div>
     </div>

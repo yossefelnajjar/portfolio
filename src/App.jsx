@@ -1,16 +1,18 @@
+import { useState }      from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import BurgerMenu from "./components/BurgerMenu";
-import Skills from "./pages/Skills";
+import Home       from "./pages/Home";
+import Skills     from "./pages/Skills";
 import Experience from "./pages/Experience";
-import { useState } from "react";
-import NotFound from "./pages/NotFound";
+import NotFound   from "./pages/NotFound";
+import BurgerMenu from "./components/BurgerMenu";
 
 export default function App() {
+  // THE POINTER BALL 
   const [pos, setPos] = useState({
     x: 0,
     y: 0,
   });
+
   document.addEventListener("mousemove", (e) => {
     const x = e.clientX;
     const y = e.clientY;
@@ -20,13 +22,12 @@ export default function App() {
     });
   });
 
-  console.log("style");
   return (
     <>
-      <div
-        className="cursor"
-        style={{ transform: `translate(${pos.x}px ,${pos.y}px)` }}></div>
+      <div className="cursor" style={{ transform: `translate(${pos.x}px ,${pos.y}px)` }}></div>
+      
       <BurgerMenu />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />

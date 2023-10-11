@@ -1,22 +1,19 @@
-import astronautLaptop from "../images/astronaut/astronaut-laptop.svg";
-import space from "../images/bg.svg";
-import Background from "../components/Background";
-import MsgPopup from "../components/MsgPopup";
 import { useSelector } from "react-redux";
+import astronautLaptop from "../assets/images/astronaut/astronaut-laptop.svg";
+import space           from "../assets/images/bg.svg";
+import Background  from "../components/Background";
+import MsgPopup    from "../components/MsgPopup";
 import SocialMedia from "../components/SocialMedia";
-import ScreenMsg from "../components/ScreenMsg";
+import ScreenMsg   from "../components/ScreenMsg";
 
 export default function Home() {
-  let visibility = useSelector((state) => state.lowerMsg);
+  const visibility = useSelector((state) => state.lowerMsg);
 
   return (
     <>
       <div className="blinkMain"></div>
       <SocialMedia />
-      <ScreenMsg
-        upperMsg="HELLO FELLOW EARTH MEMBER"
-        middleMsg="👾 I AM YOSSEF 👾"
-      />
+      <ScreenMsg upperMsg="HELLO FELLOW EARTH MEMBER" middleMsg="👾 I AM YOSSEF 👾" />
       {visibility && (
         <MsgPopup
           message={
@@ -34,12 +31,9 @@ export default function Home() {
             </>
           }
         />
-      )}
-      <Background
-        showEarth={true}
-        spaceBg={space}
-        astronaut={astronautLaptop}
-      />
+      ) }
+      
+      <Background showEarth={true} spaceBg={space} astronaut={astronautLaptop} />
     </>
   );
 }

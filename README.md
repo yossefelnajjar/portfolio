@@ -2,9 +2,9 @@
 
 ## Live Demo
 
-You can access the live demo of my portfolio [here](https://yossef-portfolio.netlify.app/).
+You can access the live demo of my portfolio [here](https://portfolio-yossef.vercel.app).
 
-![Portfolio Screenshot](./src/images/pages/home.png)
+![Portfolio Screenshot](./src/assets/images/pages/home.png)
 
 Welcome to my portfolio! This project showcases my skills and projects using the following technologies and libraries:
 
@@ -23,26 +23,26 @@ Welcome to my portfolio! This project showcases my skills and projects using the
 
 ### Home
 
-![Home Page Screenshot](./src/images/pages/home.png)
+![Home Page Screenshot](./src/assets/images/pages/home.png)
 
 The Home page serves as the introduction to my portfolio, providing an overview of who I am and what I do.
 
 ### Skills
 
-![Skills Page Screenshot](./src/images/pages/skills1.png)
-![Skills-2 Page Screenshot](./src/images/pages/skills2.png)
+![Skills Page Screenshot](./src/assets/images/pages/skills1.png)
+![Skills-2 Page Screenshot](./src/assets/images/pages/skills2.png)
 
 The Skills page showcases my technical skills and expertise in various technologies and tools.
 
 ### Experience
 
-![Experience Page Screenshot](./src/images/pages/experience.png)
+![Experience Page Screenshot](./src/assets/images/pages/experience.png)
 
 The Experience page details my work history, including previous jobs, projects, and accomplishments.
 
 ### 404 Not Found
 
-![404 Not Found Page Screenshot](./src/images/pages/notFound.png)
+![404 Not Found Page Screenshot](./src/assets/images/pages/notFound.png)
 
 The 404 Not Found page is displayed when a user tries to access a page that doesn't exist. It helps users navigate back to the main sections of the portfolio.
 

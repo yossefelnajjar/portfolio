@@ -1,119 +1,92 @@
-import astronautLaptopStand from "../images/astronaut/astronaut-laptop-stand.svg";
-import skillsBg from "../images/skillsBg.svg";
-import Background from "../components/Background";
-import MsgPopup from "../components/MsgPopup";
 import { useSelector } from "react-redux";
+import astronautLaptopStand from "../assets/images/astronaut/astronaut-laptop-stand.svg";
+import skillsBg             from "../assets/images/skillsBg.svg";
+import Background  from "../components/Background";
+import MsgPopup    from "../components/MsgPopup";
 import SocialMedia from "../components/SocialMedia";
-import ScreenMsg from "../components/ScreenMsg";
+import ScreenMsg   from "../components/ScreenMsg";
 
 export default function Skills() {
-  let visibility = useSelector((state) => state.lowerMsg);
+  const visibility = useSelector((state) => state.lowerMsg);
+
+  const skillsData = [
+    {
+      name: "HTML",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/html-5.svg",
+    },
+    {
+      name: "css",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/css-3.svg",
+    },
+    {
+      name: "javascript",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/javascript.svg",
+    },
+    {
+      name: "react.js",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/react.svg",
+    },
+    {
+      name: "react router",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/react-router.svg",
+    },
+    {
+      name: "Redux",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/redux.svg",
+    },
+    {
+      name: "git & github",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/git.svg",
+    },
+    {
+      name: "Sass",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/sass.svg",
+    },
+    {
+      name: "Bootstrap",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/bootstrap.svg",
+    },
+    {
+      name: "tailwindcss",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/tailwindcss-icon.svg",
+    },
+    {
+      name: "matrial ui",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/material-ui.svg",
+    },
+    {
+      name: "npm",
+      image: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/npm.svg",
+    }
+  ];
+
+  const skills = skillsData.map((skill) => (
+    <div className="skillCard">
+        <p>{skill.name}</p>
+        <img src={skill.image} alt="skill-icon" />
+    </div>
+  ))
 
   return (
     <>
       <div className="blinkMain"></div>
       <SocialMedia />
       <ScreenMsg upperMsg="SKILLS" />
-      {visibility && (
+      
+      { visibility && (
         <MsgPopup
           message={
             <>
-              Skills i gained from earthlings
+              <p> Skills i gained from earthlings </p>
               <div className="skillsGrid">
-                <div className="skillCard">
-                  HTML
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/html-5.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  css
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/css-3.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  javascript
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/javascript.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  react.js
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/react.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  react router
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/react-router.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  Redux
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/redux.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  git & github
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/git.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  Sass
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/sass.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  Bootstrap
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/bootstrap.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  tailwindcss
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/tailwindcss-icon.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  matrial ui
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/material-ui.svg"
-                    alt=" logo"
-                  />
-                </div>
-                <div className="skillCard">
-                  npm
-                  <img
-                    src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/npm.svg"
-                    alt=" logo"
-                  />
-                </div>
+                { skills }
               </div>
             </>
           }
         />
-      )}
-      <Background
-        showEarth={true}
-        spaceBg={skillsBg}
-        astronaut={astronautLaptopStand}
-      />
+      ) }
+      
+      <Background showEarth={true} spaceBg={skillsBg} astronaut={astronautLaptopStand} />
     </>
   );
 }
