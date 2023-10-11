@@ -1,10 +1,16 @@
 # Portfolio
 
+![Portfolio Screenshot](./src/images/pages/home.png)
+
 ## Live Demo
 
+<<<<<<< HEAD
 You can access the live demo of my portfolio [here](https://portfolio-yossef.vercel.app).
 
 ![Portfolio Screenshot](./src/assets/images/pages/home.png)
+=======
+**Live Demo**: [Portfolio](https://portfolio-yossef.vercel.app/).
+>>>>>>> a22c5adad9945d0b40d0559bbb205ab5ab6b449c
 
 Welcome to my portfolio! This project showcases my skills and projects using the following technologies and libraries:
 
